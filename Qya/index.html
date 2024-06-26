@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://html5-templates.com/">
+    <title>For Qya</title>
+    <meta name="description" content="Simplified Bootstrap template with sticky menu">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/sticky-menu.css" rel="stylesheet">
+    <link rel="stylesheet" href="partner.css">
+    <!--responsive.css-->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="FbjFQH_WAAE_RsA.png">
+    <style>
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .content-container {
+                max-width: 100%; /* Adjust according to your design */
+            }
+            .navbar-default .navbar-nav > li > a {
+                font-size: 14px; /* Adjust font size for smaller screens */
+            }
+        }
+
+        /* Welcome Section */
+        .welcome-section {
+            text-align: center; /* Center the text within the welcome section */
+            margin-top: 50px; /* Adjust the top margin as needed to center vertically */
+        }
+
+        /* Add these styles to change the color of the navigation bar to rose pink */
+        .navbar-default {
+            background-color: #ff66b2; /* Rose pink color */
+        }
+
+        .navbar-default .navbar-nav > li > a {
+            color: #fff; /* White text color */
+        }
+
+        .navbar-default .navbar-nav > li.active > a,
+        .navbar-default .navbar-nav > li.active > a:hover,
+        .navbar-default .navbar-nav > li.active > a:focus {
+            background-color: #ff3399; /* Slightly darker rose pink for active link */
+            color: #fff; /* White text color for active link */
+        }
+
+        /* Container for content with maximum width */
+        .content-container {
+            max-width: 100%; /* Adjust the maximum width as needed */
+            text-align: center;
+            margin: 0 auto; /* Center content horizontally */
+        }
+
+        /* Popup container - can be anything you want */
+        .popup {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* The actual popup */
+        .popup .popuptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+        }
+
+        /* Popup arrow */
+        .popup .popuptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        /* Toggle this class - hide and show the popup */
+        .popup .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Welcome</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">Dayang</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#whatwedo">Shasha</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Qyasateena</a>
+                    </li>
+                </ul>
+            </div> <!-- .navbar-collapse -->
+        </div> <!-- .container -->
+    </nav>
+
+    <!-- Welcome Section -->
+    <section id="welcome" class="welcome-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="content-container">
+                        <h1 style="color: gold;">Hello Qya</h1>
+                        <p style="color: red;">I Love you ^^.</p>
+                        <img src="qya4.jpeg" alt="qya2" style="width: 100%; max-width: 400px; border: 5px solid #555;">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="content-container">
+                        <h2>팝업</h2>
+                        <div class="popup" onclick="togglePopup()">
+                            Click me
+                            <span class="popuptext" id="myPopup">
+                                <img src="sha.png" alt="Popup Image" style="width: 100%; max-width: 150px;">
+                            </span>
+                        </div>
+                        <div class="content-container">
+                            <h1><br><br>Days Counter</h1>
+                            <p id="daysCounter"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" style="margin-top: 10px;">
+                    <h1>Dayang</h1>
+                    <div class="content-container">
+                        <img src="qya1.jpeg" alt="me n qya1" style="width:100%; max-width: 400px; border: 5px solid #555;">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="content-container">
+                        <p>Song that reminds me the most about you.</p>
+                        <img src="tt.jpg" alt="crying city" style="width:100%; max-width: 200px; border: 5px solid #555;">
+                        <p><br></p>
+                        <audio controls autoplay>
+                            <source src="cc.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What we do Section -->
+    <section id="whatwedo" class="whatwedo-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Shasha</h1>
+                    <div class="content-container">
+                        <img src="qya3.jpg" alt="me n qya1" style="width:100%; max-width: 400px; border: 5px solid #555;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Qyasateena</h1>
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <p class="heading">Will you be my valentine?</p>
+            <img class="pic" src="https://media.tenor.com/zGm5acSjHCIAAAAM/cat-begging.gif" alt="">
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12" style="text-align: center;">
+                    <button tabindex="-1" id="bocchi2" onclick="openModal('dialog2')">NO</button>
+                    <button id="bocchi1" onclick="openModal('dialog')">YES BBY!</button>
+                </div>
+            </div>
+        </div>
+
+        <dialog id="dialog">
+            <img class="pic1" src="c7vtwaqft0b51.jpg" width="210px" height="250px" alt="">
+            <br/>
+            <center>
+                <p>YAYY THANK U ! LOVE U</p>
+            </center>
+            <button onclick="closeModal()" class="right">close ><</button>
+        </dialog>
+        <dialog id="dialog2">
+            <img class="pic1" src="cat-sob.gif" width="210px" height="250px" alt="">
+            <br/>
+            <center>
+                <p>Really..... plsplsplspls think again</p>
+            </center>
+            <button onclick="closeModal2()" class="right">close ><</button>
+        </dialog>
+
+        <script>
+            var dialog = document.getElementById("dialog");
+            var dialog2 = document.getElementById("dialog2");
+            
+            function openModal(dialogId) {
+                if (dialogId === 'dialog') {
+                    dialog.showModal();
+                } else if (dialogId === 'dialog2') {
+                    dialog2.showModal();
+                }
+            }
+
+            function closeModal() {
+                dialog.close();
+            }
+
+            function closeModal2() {
+                dialog2.close();
+            }
+
+            const button2 = document.getElementById('bocchi2');
+            let left = 40;
+
+            button2.addEventListener('click', function() {
+                if (left == 40) {
+                    left = 35;
+                } else {
+                    left = 40;
+                }
+                this.style.left = left + '%';
+            });
+
+            if (window.matchMedia("(max-width: 700px)").matches) {
+                let left = 30;
+                button2.addEventListener('click', function() {
+                    if (left == 30) {
+                        left = 15;
+                    } else {
+                        left = 30;
+                    }
+                    this.style.left = left + '%';
+                });
+            }
+        </script>
+</section>
+    </section>
+
+
+
+
+
+    <a id="back2Top" title="Back to top" href="#">&#10148;</a>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/sticky-menu.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Function to toggle the popup
+        function togglePopup() {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+        }
+
+        // Function to update the days counter
+        function updateDaysCounter() {
+            // Set the target date (2/05/2023)
+            const targetDate = new Date('2023-05-02T00:00:00');
+            const currentDate = new Date();
+            const timeDifference = currentDate - targetDate;
+            const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+            document.getElementById('daysCounter').textContent = `Days since 2/05/2023: ${daysDifference}`;
+        }
+
+        // Initial call to display the days difference
+        updateDaysCounter();
+
+        // Set up an interval to update the counter daily
+        setInterval(updateDaysCounter, 24 * 60 * 60 * 1000); // 24 hours in milliseconds
+    </script>
+</body>
+</html>
