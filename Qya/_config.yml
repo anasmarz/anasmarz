@@ -1,0 +1,6 @@
+title: Qya
+description: >- # this means to ignore newlines until "baseurl:"
+  A site built with Jekyll and hosted on GitHub Pages.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://anasmarz.github.io/anasmarz/Qya" # the base hostname & protocol for your site
+theme: minima # or any other theme you prefer
