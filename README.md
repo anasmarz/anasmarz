@@ -17,7 +17,7 @@
 <img src="https://komarev.com/ghpvc/?username=anasmarz&style=flat-square&color=blue" alt=""/>
 
 <h1>
-  hey there
+  Undergraduate in Computer Networking with Honors at University Putra Malaysia.
   <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
 </h1>
 
