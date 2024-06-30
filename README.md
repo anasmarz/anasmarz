@@ -24,7 +24,7 @@
 
 ---
   <div>
-    <img src ="Gojo-nah-id-win-Jujutsu-Kaisen.webp" />
+    <img src ="Gojo-nah-id-win-Jujutsu-Kaisen.webp" width="350" height = "350"/>
   </div>
 
 ---
