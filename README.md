@@ -24,7 +24,7 @@
 
 ---
   <div>
-    <img src ="" />
+    <img src ="Gojo-nah-id-win-Jujutsu-Kaisen.webp" />
   </div>
 
 ---
