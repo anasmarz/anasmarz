@@ -39,22 +39,24 @@ main {
 }
 
 /* Marquee Styles */
+.marquee__item {
+  flex: 0 0 auto;
+  width: 100%; /* Let images scale down to fit container */
+  max-width: 300px; /* Ensure images don't exceed 450px */
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
 .marquee {
   display: flex;
-  overflow: hidden; /* Hide any overflow */
+  overflow: hidden;
   white-space: nowrap;
   border: 2px solid #ddd;
   border-radius: 10px;
   background-color: #fff;
   padding: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.marquee__item {
-  flex: 0 0 auto;
-  width: 450px; /* Ensure the images are 450px wide */
-  margin-right: 10px; /* Space between images */
-  transition: transform 0.3s;
+  width: 100%; /* Full width container */
 }
 
 .marquee__item:hover {
