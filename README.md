@@ -1,4 +1,4 @@
-<div id="header" align="center">
+<div id="header" align="left">
   <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDY2cWpnajN1Zncxd2hqOW9jeGFqdzZ4OTVmMnFlcG15cTY5ZnRhNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GLC1Z9y2ZLKomEYdRV/giphy.gif" width="100"/>
 </div>
 
@@ -17,12 +17,15 @@
 <img src="https://komarev.com/ghpvc/?username=anasmarz&style=flat-square&color=blue" alt=""/>
 
 <h1>
-  hey there
+  Undergraduate in Computer Networking with Honors at University Putra Malaysia.
   <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
 </h1>
 
 
 ---
+  <div>
+    <img src ="Gojo-nah-id-win-Jujutsu-Kaisen.webp" width="450" height = "350"/>
+  </div>
 
 ---
 
