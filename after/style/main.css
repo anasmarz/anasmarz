@@ -1,101 +1,94 @@
-/* General marquee styling */
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+header p {
+  margin: 10px 0 0;
+}
+
+main {
+  padding: 20px;
+}
+
+.marquee-section {
+  margin-bottom: 40px;
+}
+
+.marquee-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #444;
+}
+
+/* Marquee Styles */
 .marquee {
   display: flex;
-  gap: 20px;
-  height: auto;
-  object-fit: contain;
-  block-size: var(--marquee-item-height);
-  margin-block: var(--marquee-item-height);
-  position: relative;
-  overflow-x: hidden;
-  mask-image: linear-gradient(
-    to right,
-    hsl(0 0% 0% / 0),
-    hsl(0 0% 0% / 1) 20%,
-    hsl(0 0% 0% / 1) 80%,
-    hsl(0 0% 0% / 0)
-  );
+  overflow: hidden; /* Hide any overflow */
+  white-space: nowrap;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Marquee variations */
+.marquee__item {
+  flex: 0 0 auto;
+  width: 450px; /* Ensure the images are 450px wide */
+  margin-right: 10px; /* Space between images */
+  transition: transform 0.3s;
+}
+
+.marquee__item:hover {
+  transform: scale(1.1);
+}
+
 .marquee--8 {
-  --marquee-item-width: 100%;
-  --marquee-item-height: 800px;
-  --marquee-duration: 36s;
-  --marquee-items: 8;
-}
-
-.marquee--3 {
-  --marquee-item-width: 150px;
-  --marquee-item-height: 150px;
-  --marquee-duration: 24s;
-  --marquee-items: 3;
+  animation: marquee 40s linear infinite; /* Adjusted duration to accommodate wider images */
 }
 
 .marquee--6 {
-  --marquee-item-width: 100%;
-  --marquee-item-height: 800px;
-  --marquee-duration: 32s;
-  --marquee-items: 6;
+  animation: marquee 30s linear infinite; /* Adjusted duration for the second set */
 }
 
-/* Marquee item styling */
-.marquee__item {
-  --marquee-item-offset: max(
-    calc(var(--marquee-item-width) * var(--marquee-items)),
-    calc(100% + var(--marquee-item-width))
-  );
-  --marquee-delay: calc(
-    var(--marquee-duration) / var(--marquee-items) * 
-    (var(--marquee-items) - var(--marquee-item-index)) * -1
-  );
-  position: absolute;
-  inset-inline-start: var(--marquee-item-offset);
-  transform: translateX(-50%);
-  animation: go linear var(--marquee-duration) var(--marquee-delay, 0s) infinite;
-}
-
-/* Border radius for marquee items */
-.marquee__item:nth-child(4n) {
-  border-top-right-radius: 1rem;
-}
-
-.marquee__item:nth-child(4n + 1) {
-  border-bottom-right-radius: 1rem;
-}
-
-.marquee__item:nth-child(4n + 2) {
-  border-bottom-left-radius: 1rem;
-}
-
-.marquee__item:nth-child(4n + 3) {
-  border-top-left-radius: 1rem;
-}
-
-/* Marquee item index for different variations */
-.marquee--8 .marquee__item:nth-of-type(1) { --marquee-item-index: 1; }
-.marquee--8 .marquee__item:nth-of-type(2) { --marquee-item-index: 2; }
-.marquee--8 .marquee__item:nth-of-type(3) { --marquee-item-index: 3; }
-.marquee--8 .marquee__item:nth-of-type(4) { --marquee-item-index: 4; }
-.marquee--8 .marquee__item:nth-of-type(5) { --marquee-item-index: 5; }
-.marquee--8 .marquee__item:nth-of-type(6) { --marquee-item-index: 6; }
-.marquee--8 .marquee__item:nth-of-type(7) { --marquee-item-index: 7; }
-.marquee--8 .marquee__item:nth-of-type(8) { --marquee-item-index: 8; }
-
-.marquee--3 .marquee__item:nth-of-type(1) { --marquee-item-index: 1; }
-.marquee--3 .marquee__item:nth-of-type(2) { --marquee-item-index: 2; }
-.marquee--3 .marquee__item:nth-of-type(3) { --marquee-item-index: 3; }
-
-.marquee--6 .marquee__item:nth-of-type(1) { --marquee-item-index: 1; }
-.marquee--6 .marquee__item:nth-of-type(2) { --marquee-item-index: 2; }
-.marquee--6 .marquee__item:nth-of-type(3) { --marquee-item-index: 3; }
-.marquee--6 .marquee__item:nth-of-type(4) { --marquee-item-index: 4; }
-.marquee--6 .marquee__item:nth-of-type(5) { --marquee-item-index: 5; }
-.marquee--6 .marquee__item:nth-of-type(6) { --marquee-item-index: 6; }
-
-/* Animation keyframes */
-@keyframes go {
-  to {
-    inset-inline-start: calc(var(--marquee-item-width) * -1);
+@keyframes marquee {
+  0% {
+      transform: translateX(100%);
   }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9em;
 }
