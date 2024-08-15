@@ -4,9 +4,20 @@ body {
   background-color: #f4f4f4;
   color: #333;
   margin: 0;
-  padding: 0;
+  text-align: center;
+  padding: 20px;
 }
-
+.container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: justify;
+  text-justify: inter-word;
+}
 header {
   background-color: #333;
   color: #fff;
@@ -42,7 +53,7 @@ main {
 .marquee__item {
   flex: 0 0 auto;
   width: 100%; /* Let images scale down to fit container */
-  max-width: 300px; /* Ensure images don't exceed 450px */
+  max-width: 350px; /* Ensure images don't exceed 450px */
   margin-right: 10px;
   transition: transform 0.3s;
 }
