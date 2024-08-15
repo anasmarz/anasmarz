@@ -298,6 +298,8 @@ body {
 
 .marquee {
   display: flex;
+  height: auto;
+  object-fit: contain;
   block-size: var(--marquee-item-height);
   margin-block: var(--marquee-item-height);
   position: relative;
