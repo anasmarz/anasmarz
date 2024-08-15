@@ -314,8 +314,8 @@ body {
 }
 
 .marquee--8 {
-  --marquee-item-width: 100px;
-  --marquee-item-height: 100px;
+  --marquee-item-width: 650px;
+  --marquee-item-height: 650px;
   --marquee-duration: 36s;
   --marquee-items: 8;
 }
@@ -328,8 +328,8 @@ body {
 }
 
 .marquee--6 {
-  --marquee-item-width: 166px;
-  --marquee-item-height: 100px;
+  --marquee-item-width: 650px;
+  --marquee-item-height: 650px;
   --marquee-duration: 32s;
   --marquee-items: 6;
 }
