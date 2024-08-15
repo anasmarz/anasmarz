@@ -444,3 +444,16 @@ body {
     inset-inline-start: calc(var(--marquee-item-width) * -1);
   }
 }
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.button-link:hover {
+  background-color: #0056b3;
+}
