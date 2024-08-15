@@ -1,3 +1,4 @@
+// trigger to play music in the background with sweetalert
 window.addEventListener('load', () => {
     Swal.fire({
         title: 'Do you want to play music in the background?',
@@ -17,9 +18,10 @@ window.addEventListener('load', () => {
     });
 });
 
+
 // animation timeline
 const animationTimeline = () => {
-    // split chars that need to be animated individually
+    // split chars that needs to be animated individually
     const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
     const hbd = document.getElementsByClassName("wish-hbd")[0];
 
@@ -207,6 +209,7 @@ const animationTimeline = () => {
         0.7, {
             opacity: 0,
             y: -50,
+            // scale: 0.3,
             rotation: 150,
             skewX: "30deg",
             ease: Elastic.easeOut.config(1, 0.5),
@@ -242,7 +245,7 @@ const animationTimeline = () => {
             visibility: "visible",
             opacity: 0,
             scale: 80,
-            repeat: 1,
+            repeat: 3,
             repeatDelay: 1.4,
         },
         0.3
@@ -254,19 +257,12 @@ const animationTimeline = () => {
     })
     .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
     .to(
-        ".nine",
+        ".last-smile",
         0.5, {
-            opacity: 0,
-            y: 30,
+            rotation: 90,
         },
-        "+=2"
-    )
-    .from(".ten", 1, {
-        opacity: 0,
-        y: 20,
-        rotationX: 5,
-        skewX: "15deg",
-    });
+        "+=1"
+    );
 
     // Restart Animation on click
     const replyBtn = document.getElementById("replay");
