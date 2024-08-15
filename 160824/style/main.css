@@ -295,9 +295,18 @@ body {
     margin-top: 20px;
   }
 }
-
+.ten {
+  all: unset; /* Reset all inherited styles */
+  display: block; /* Ensure it behaves like a block-level element */
+  box-sizing: content-box; /* Use content-box for width/height calculation */
+  width: auto; /* Let width behave naturally */
+  height: auto; /* Let height behave naturally */
+  padding: 20px; /* Add padding if needed */
+  margin: 0; /* Reset margin if needed */
+}
 .marquee {
   display: flex;
+  gap: 20px;
   height: auto;
   object-fit: contain;
   block-size: var(--marquee-item-height);
